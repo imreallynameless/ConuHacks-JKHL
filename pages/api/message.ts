@@ -17,5 +17,5 @@ export default function handler(
   delete req.body.OrderID;
   db.set(OrderID, req.body);
 
-  res.status(200).json({ status: "Success", data: db.get(OrderID) });
+  res.status(200).json({ status: "Success", data: db.JSON() });
 }
