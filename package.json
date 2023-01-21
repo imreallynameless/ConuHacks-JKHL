@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "dev443": "next dev -p 443",
+    "dev443": "next dev -p 80",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -18,9 +18,12 @@
     "eslint-config-next": "13.1.4",
     "firebase": "^9.16.0",
     "next": "13.1.4",
+    "nextjs-cors": "^2.1.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "recharts": "^2.3.2",
     "simple-json-db": "^2.0.0",
     "typescript": "4.9.4"
-  }
+  },
+  "devDependencies": {}
 }
