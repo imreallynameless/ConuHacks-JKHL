@@ -1,0 +1,15 @@
+conuhacks-vii
+
+Data:
+- Current price of stock (+ history)
+- Company genre (tech, oil, etc)
+- Company name
+- Volume of transaction
+
+Visualization:
+- (x, y) coordinates
+- size
+- color
+- connections (between nodes)
+- Clusters (by position)
+- Trail background (history)
