@@ -5,9 +5,16 @@ type Data = {
   name: string;
 };
 
+// Temporary solution. Use something like 'redis' in the future
+const buffer = {};
+
 export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
-  res.status(200).json({ name: "John Doe" });
+  const OrderID = req.body.OrderID;
+  delete req.body.OrderID;
+  buffer[OrderID] = req.body;
+
+  res.status(200).json(buffer);
 }
