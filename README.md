@@ -33,4 +33,6 @@ guaranteed interview, and finally a day with our teams.
 Prize: 4 x 500$ cheque, with an office visit & interview
 
 
-We use 'stars' of varying sizes to indicate how
+We use 'stars' of varying sizes to indicate how big (volume) each message is.
+Stars that are larger will last longer and be bigger.
+We will have an axis where it increases as the stock price increases and what not
