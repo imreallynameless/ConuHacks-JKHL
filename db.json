@@ -1,0 +1,9 @@
+{
+  "b963bbc9-9283-11ed-8b08-047c16291a22": {
+    "TimeStampEpoch": "1673015280011081372",
+    "MessageType": "NewOrderRequest",
+    "Symbol": "OOOTO",
+    "OrderPrice": "69.37",
+    "Exchange": "TSX"
+  }
+}
