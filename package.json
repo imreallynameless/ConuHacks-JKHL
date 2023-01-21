@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "dev443": "next dev -o 443",
+    "dev443": "next dev -p 443",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
