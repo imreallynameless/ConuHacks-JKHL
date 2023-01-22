@@ -14,7 +14,7 @@ function preload() {
 
 function setup() {
   createCanvas(displayWidth, displayHeight);
-  
+  stroke(217, 217, 217);
   
 }
 
@@ -44,19 +44,18 @@ function draw() {
     // }
   }
   
-  background(255);
+  background(31, 31, 31);
   // update the drawn data
   for (let i = 0; i < dots.length; i++) {
     // dots[i].timer -= 1;
     strokeWeight(dots[i].strokeWeight);
     // console.log(dots[i].timer + " " + dots[i].strokeWeight);
     point(dots[i].x, dots[i].y);
-    if (dots[i].timer <= 0) {
+    if (dots[i].timer <= 1) {
       dots.splice(i, 1);
     }
     else{
       dots[i].timer -= 1;
-      dots[i].strokeWeight -= 0.1;
     }
   }
   console.log(dots.length);
@@ -67,11 +66,15 @@ function dotMaker(data) {
   var dot = {
     x: random(width),
     y: random(height),
-    timer: data["OrderPrice"] / 20,
-    strokeWeight: (data["OrderPrice"]) / 15
+    // timer: data["OrderPrice"] / 20,
+    timer: Math.random() * 1000,
+    // strokeWeight: (data["OrderPrice"]) / 15
+    strokeWeight: Math.random() * 10
   }
   // console.log(dot.strokeWeight);
   // console.log(dot.timer);
+  console.log(dot.x);
+  console.log(dot.y);
   return dot;
 }
 
