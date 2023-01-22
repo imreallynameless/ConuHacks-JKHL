@@ -26,7 +26,7 @@ function draw() {
     
 
     for (let i = 0; i < curData.length; i++) {
-      dots.push(dotMaker(data));
+      dots.push(dotMaker(curData[i]));
     }
 
     // check overlap of dots
@@ -48,7 +48,7 @@ function draw() {
   for (let i = 0; i < dots.length; i++) {
     dots[i].timer--;
     // console.log(dots[i].x + " " + dots[i].y + " " + dots[i].timer + " " + dots[i].stroke);
-    stroke(dots[i].stroke);
+    strokeWeight(dots[i].strokeWeight);
     point(dots[i].x, dots[i].y);
     if (dots[i].timer <= 0) {
       dots.splice(i, 1);
@@ -62,7 +62,7 @@ function dotMaker(data) {
     x: random(width),
     y: random(height),
     timer: data["OrderPrice"] / 50,
-    stroke: (data["OrderPrice"] * 2) / 100
+    strokeWeight: (data["OrderPrice"]) / 50
   }
   console.log(data["OrderPrice"]);
   return dot;
