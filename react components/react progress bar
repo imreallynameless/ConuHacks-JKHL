@@ -1,0 +1,36 @@
+import React from 'react';
+
+class ProgressBar extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      startTime: new Date().getTime(),
+      currentTime: new Date().getTime(),
+      duration: props.duration
+    };
+  }
+
+  componentDidMount() {
+    this.interval = setInterval(() => {
+      this.setState({
+        currentTime: new Date().getTime()
+      });
+    }, 50);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.interval);
+  }
+
+  render() {
+    const elapsedTime = this.state.currentTime - this.state.startTime;
+    const percentageComplete = (elapsedTime / (this.state.duration * 1000)) * 100;
+    return (
+      <div>
+        <div style={{ width: `${percentageComplete}%`, background: '#4CAF50', height: '20px' }} />
+      </div>
+    );
+  }
+}
+
+export default ProgressBar;
